@@ -54,6 +54,7 @@ app.put('/books/:id', (req, res) => {
   const bookIndex = books.findIndex(book => book.id === bookId);
 
   if (bookIndex !== -1) {
+    updatedBook.id = bookId;
     books[bookIndex] = updatedBook; // Update book data in the array
     res.json(updatedBook); // Send updated book data
   } else {
