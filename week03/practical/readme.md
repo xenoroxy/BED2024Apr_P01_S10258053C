@@ -24,11 +24,3 @@
 - Text editor or IDE of your choice
 
 **This practical builds upon the previous session, where you explored the MVC architecture and implemented basic CRUD operations in Node.js and Express. Now, we'll enhance the application by adding input validation and centralized error handling.**
-
-### Complete the following parts:
-
-1. Part 1 - Setting up the project
-2. Part 2 - Building the API server
-3. Part 3 - Implementing the CRUD opertations
-4. Part 4 - Starting the server and test using Postman
-5. Part 5 - Understanding the concepts
