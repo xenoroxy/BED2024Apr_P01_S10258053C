@@ -37,16 +37,16 @@ const createBook = async (req, res) => {
     }
 };
 
-const updatedBook = async (req, res) => {
+const updateBook = async (req, res) => {
     const bookId = parseInt(req.params.id);
     const newBookData = req.body;
 
     try {
-        const updatedBook = await Book.updatedBook(bookId, newBookData);
-        if (!updatedBook) {
+        const updateBook = await Book.updateBook(bookId, newBookData);
+        if (!updateBook) {
             return res.status(404).send("Book not found");
         }
-        res.json(updatedBook);
+        res.json(updateBook);
     } catch (error) {
         console.error(error);
         res.status(500).send("Error updating book");
@@ -71,6 +71,6 @@ module.exports = {
     getAllBooks,
     createBook,
     getBookById,
-    updatedBook,
+    updateBook,
     deleteBook,
 };
