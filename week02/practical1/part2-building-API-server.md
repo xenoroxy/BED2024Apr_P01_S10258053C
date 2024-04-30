@@ -1,9 +1,10 @@
 ### Part 2: Building the API Server (50 mins)
 
-**1. Import Express:** Add the following line at the top of your app.js file.
+**1. Import Express and body-parser:** Add the following line at the top of your app.js file.
 
 ```
 const express = require('express');
+const bodyParser = require("body-parser");
 ```
 
 **2. Instantiate the Express app:** Create an instance of the Express app using express().
