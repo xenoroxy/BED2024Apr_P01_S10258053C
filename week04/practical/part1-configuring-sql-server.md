@@ -15,6 +15,19 @@ Here's how to enable the TCP/IP protocol for remote connections to your SQL Serv
 - Ensure the **Enabled** checkbox is ticked.
 - Under the **IP Addresses** tab, you'll see the **TCP Port**. This is the port on which your SQL Server listens for connections. The default port is usually 1433. You can leave it as the default or choose another available port.
 - Click **OK** to save the changes.
+- Restart your SQL Server service after making changes to the configuration.
+
+**1.1.1 Enable TCP/IP protocol for SQL Server**
+
+![Step 1 to enable TCPIP](./screenshots/1_enable_TCPIP.png)
+
+**1.1.2 Change TCP port to 1433 under IPAll tab**
+
+![Step 2 to enable TCPIP](./screenshots/2_enable_TCPIP.png)
+
+**1.1.3 Restart SQL Server**
+
+![Step 3 to enable TCPIP](./screenshots/3_enable_TCPIP.png)
 
 **1.2 Set Authentication Mode to Mixed Mode:**
 
@@ -28,6 +41,9 @@ Here's how to configure SQL Server Express to use mixed mode authentication:
 - Go to the **Security** page.
 - Under **Server authentication**, select **SQL Server and Windows Authentication mode**. This allows login using both Windows credentials and dedicated SQL Server logins.
 - Click **OK** to save the changes.
+- Restart your SQL Server service after making changes to the configuration.
+
+![Change authentication mode](./screenshots/4_mixed_server_authentication_mode.png)
 
 **1.3 Create a Dedicated Login User (Optional but Recommended):**
 

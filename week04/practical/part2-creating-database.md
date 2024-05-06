@@ -5,13 +5,15 @@ This step guides you through creating a database named "bed_db" and populating i
 **1. Connect to SQL Server Management Studio (SSMS):**
 
 - Open **SQL Server Management Studio (SSMS)**. You can find it in your Windows Start menu or by searching for it.
-- Connect to your SQL Server instance using appropriate credentials (e.g., the dedicated login user created in step 1 or the "sa" account if using that).
+- Connect to your SQL Server instance using appropriate credentials (e.g., the "sa" account or windows authentication).
 
 **2. Create the Database:**
 
 - In the **Object Explorer** window, right-click on **Databases** and select **New Database**.
-- In the **New Database** window, enter "bed_db" as the database name.
+- In the **New Database** window, enter **bed_db** as the database name.
 - Click **OK** to create the database.
+
+![Create bed_db database](./screenshots/5_create_bed_db.png)
 
 **3. Execute the Scripts:**
 
@@ -32,6 +34,18 @@ VALUES
 ```
 
 - Click the **Execute** button (or press F5) to run the script.
+
+**3.1 Create table**
+
+![Create table](./screenshots/6_create_table.png)
+
+**3.2 Insert data**
+
+![Step 1 to insert data](./screenshots/7_insert_data.png)
+
+**3.3 Verify data added**
+
+![Step 2 to insert data](./screenshots/8_insert_data_2.png)
 
 **Explanation:**
 
