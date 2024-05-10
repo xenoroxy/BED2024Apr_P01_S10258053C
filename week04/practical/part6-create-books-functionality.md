@@ -5,6 +5,9 @@ This step focuses on adding the functionality to create a new book record in you
 **1. Book Model (`book.js`):**
 
 ```javascript
+const sql = require("mssql");
+const dbConfig = require("../dbConfig");
+
 class Book {
   // ... existing code for constructor and getBookById
 
