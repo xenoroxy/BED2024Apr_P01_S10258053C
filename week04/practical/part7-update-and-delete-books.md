@@ -5,6 +5,9 @@ This step expands your Books API to include functionalities for updating and del
 **1. Book Model (`book.js`):**
 
 ```javascript
+const sql = require("mssql");
+const dbConfig = require("../dbConfig");
+
 class Book {
   // ... existing code for constructor and getBookById
 

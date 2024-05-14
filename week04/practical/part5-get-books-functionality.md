@@ -8,6 +8,9 @@ This step dives into creating models and controllers for handling GET requests r
 - Inside the `models` folder, create a file named `book.js` with the following code:
 
 ```javascript
+const sql = require("mssql");
+const dbConfig = require("../dbConfig");
+
 class Book {
   constructor(id, title, author) {
     this.id = id;
