@@ -5,7 +5,7 @@ In this step, we'll modify your Express application's main file (`app.js`) to co
 1. **Import the `express.static` Middleware:**
 
    Open your `app.js` file and locate the section where you import required modules for your Express application. Include the following line to import the `express.static` middleware:
-
+  
    ```javascript
    const express = require("express");
    // ... other import statements
