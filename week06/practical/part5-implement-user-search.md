@@ -79,7 +79,7 @@ const usersController = require("./controllers/usersController");
 
 // ... existing routes ...
 
-router.get("/users/search", usersController.searchUsers);
+app.get("/users/search", usersController.searchUsers);
 
 module.exports = router;
 ```
