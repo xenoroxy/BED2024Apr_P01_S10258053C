@@ -3,6 +3,7 @@ const booksController = require("./controllers/booksController");
 const sql = require("mssql");
 const dbConfig = require("./dbConfig");
 const bodyParser = require("body-parser");
+const usersController = require("./controllers/usersController");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,6 +20,17 @@ app.get("/books/:id", booksController.getBookById);
 app.post("/books", validateBook, booksController.createBook);
 app.put("/books/:id", booksController.updateBook);
 app.delete("/books/:id", booksController.deleteBook);
+
+app.post("/users", usersController.createUser);
+app.get("/users", usersController.getAllUsers);
+app.get("/users/:id", usersController.getUserById);
+app.put("/users/:id", usersController.updateUser);
+app.delete("/users/:id", usersController.deleteUser);
+
+app.get("/users/search", usersController.searchUsers);
+app.get("/users/with-books", usersController.getUsersWithBooks);
+
+module.exports = router;
 
 app.listen(port, async () => {
     try {
