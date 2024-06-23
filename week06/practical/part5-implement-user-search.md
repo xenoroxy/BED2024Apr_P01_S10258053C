@@ -80,7 +80,6 @@ const usersController = require("./controllers/usersController");
 
 app.get("/users/search", usersController.searchUsers);
 
-module.exports = router;
 ```
 
 **2. Testing with Postman:**
