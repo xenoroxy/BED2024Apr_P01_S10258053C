@@ -160,7 +160,7 @@ async function login(req, res) {
 
     // Generate JWT token
     const payload = {
-      userId: user.id,
+      id: user.id,
       role: user.role,
     };
     const token = jwt.sign(payload, "your_secret_key", { expiresIn: "3600s" }); // Expires in 1 hour
