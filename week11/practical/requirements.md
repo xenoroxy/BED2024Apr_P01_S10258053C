@@ -208,16 +208,20 @@ function verifyJWT(req, res, next) {
     // Check user role for authorization (replace with your logic)
     const authorizedRoles = {
       "/books": ["member", "librarian"], // Anyone can view books
-      "/books/:bookId/availability": ["librarian"], // Only librarians can update availability
+      "/books/[0-9]+/availability": ["librarian"], // Only librarians can update availability
     };
 
     const requestedEndpoint = req.url;
     const userRole = decoded.role;
 
-    if (
-      !authorizedRoles[requestedEndpoint] ||
-      !authorizedRoles[requestedEndpoint].includes(userRole)
-    ) {
+    const authorizedRole = Object.entries(authorizedRoles).find(
+      ([endpoint, roles]) => {
+        const regex = new RegExp(`^${endpoint}$`); // Create RegExp from endpoint
+        return regex.test(requestedEndpoint) && roles.includes(userRole);
+      }
+    );
+
+    if (!authorizedRole) {
       return res.status(403).json({ message: "Forbidden" });
     }
 
