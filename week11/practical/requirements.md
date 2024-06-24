@@ -23,7 +23,7 @@ The API needs to be secure and ensure:
 - Implement authorization using roles (member, librarian) to control access to different functionalities (Express middleware).
 - Use a database (Microsoft SQL Server) to store user information (Users table) and book data (Books table).
 - Design API endpoints for:
-  - User registration (POST /users)
+  - User registration (POST /register)
   - Login (POST /login)
   - Get all books (GET /books) (accessible by both librarians and members)
   - Update book availability (PUT /books/:bookId/availability) (accessible only by librarians)
@@ -40,11 +40,11 @@ The API needs to be secure and ensure:
 Develop a secure API for the Polytechnic library system that allows:
 
 - **Library Members (Students):**
-  - Register for an account (POST /users)
+  - Register for an account (POST /register)
   - Login to access the system (POST /login)
   - View a list of books and their availability (Y/N) (GET /books)
 - **Librarians:**
-  - Register for an account (POST /users)
+  - Register for an account (POST /register)
   - Login to access the system (POST /login)
   - View a list of books and their availability (Y/N) (GET /books)
   - Update the availability of books (Y/N) (PUT /books/:bookId/availability)
@@ -84,7 +84,7 @@ Develop a secure API for the Polytechnic library system that allows:
 
 Implement user registration, hash the user's password before storing it in the database. Implement password hashing using bcryptjs.
 
-1. **User Registration (POST /users):**
+1. **User Registration (POST /register):**
 
    - This endpoint should allow users (members and librarians) to register for the system.
    - It should accept username, password, and role in the request body.
