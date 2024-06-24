@@ -58,7 +58,7 @@ Develop a secure API for the Polytechnic library system that allows:
      - user_id (INT, PRIMARY KEY)
      - username (VARCHAR(255), UNIQUE)
      - passwordHash (VARCHAR(255))
-     - role (VARCHAR(20), ('student', 'librarian'))
+     - role (VARCHAR(20), ('member', 'librarian'))
 
    - **Books Table:**
      - book_id (INT, PRIMARY KEY)
