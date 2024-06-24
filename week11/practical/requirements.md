@@ -26,7 +26,7 @@ The API needs to be secure and ensure:
   - User registration (POST /users)
   - Login (POST /login)
   - Get all books (GET /books) (accessible by both librarians and members)
-  - Update book availability (PUT /books/:bookId) (accessible only by librarians)
+  - Update book availability (PUT /books/:bookId/availability) (accessible only by librarians)
 - Implement basic error handling and return appropriate status codes (e.g., 200 for success, 401 for unauthorized, 400 for bad request) for successful and failed requests.
 
 **Technologies:**
@@ -47,7 +47,7 @@ Develop a secure API for the Polytechnic library system that allows:
   - Register for an account (POST /users)
   - Login to access the system (POST /login)
   - View a list of books and their availability (Y/N) (GET /books)
-  - Update the availability of books (Y/N) (PUT /books/:bookId)
+  - Update the availability of books (Y/N) (PUT /books/:bookId/availability)
 
 **Part 1: Data Access and Manipulation**
 
@@ -73,7 +73,7 @@ Develop a secure API for the Polytechnic library system that allows:
    - This endpoint should retrieve a list of all books from the database.
    - Return a JSON response containing an array of book objects (including title, author, and availability).
 
-4. **Implement Update Book Availability (PUT /books/:bookId):**
+4. **Implement Update Book Availability (PUT /books/:bookId/availability):**
 
    - This endpoint should update the availability of a book (Y/N) based on its ID.
    - It should accept the updated availability value in the request body.
@@ -234,7 +234,7 @@ function verifyJWT(req, res, next) {
    - Add authorization to this endpoint using the middleware created in Part 4.
    - It should be accessible to both members and librarians.
 
-2. **Update Book Availability (PUT /books/:bookId):**
+2. **Update Book Availability (PUT /books/:bookId/availability):**
 
    - Add authorization using the middleware created in Part 4 to restrict access to librarians only.
 
