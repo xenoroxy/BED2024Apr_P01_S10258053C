@@ -54,9 +54,8 @@ const User = require("../models/user");
 async function searchUsers(req, res) {
   const searchTerm = req.query.searchTerm; // Extract search term from query params
 
-  try {
-    const userController = new User();
-    const users = await userController.searchUsers(searchTerm);
+  try {    
+    const users = await User.searchUsers(searchTerm);
     res.json(users);
   } catch (error) {
     console.error(error);
@@ -68,7 +67,7 @@ async function searchUsers(req, res) {
 **Explanation:**
 
 - The `searchUsers` controller function extracts the `searchTerm` from the request query parameters.
-- It creates a new `User` instance and calls the `searchUsers` model method.
+- It calls the static `searchUsers` method in the `User` model.
 - Upon successful search, the retrieved users are sent as a JSON response.
 - Error handling sends a generic error message with a 500 status code.
 
@@ -81,7 +80,6 @@ const usersController = require("./controllers/usersController");
 
 app.get("/users/search", usersController.searchUsers);
 
-module.exports = router;
 ```
 
 **2. Testing with Postman:**
