@@ -42,7 +42,11 @@ const doc = {
 swaggerAutogen(outputFile, routes, doc);
 ```
 
-**3. Integrate Swagger UI:**
+**3. Generate the `swagger-output.json` file:**
+
+- run `node swagger.js` to generate the `swagger-output.json` file
+
+**4. Integrate Swagger UI:**
 
 - In your main Express.js application file (e.g., `app.js`), import the generated Swagger spec and `swagger-ui-express`.
 
