@@ -29,13 +29,13 @@ describe("Book.getAllBooks", () => {
   it("should retrieve all books from the database", async () => {
     const mockBooks = [
       {
-        book_id: 1,
+        id: 1,
         title: "The Lord of the Rings",
         author: "J.R.R. Tolkien",
         availability: "Y",
       },
       {
-        book_id: 2,
+        id: 2,
         title: "The Hitchhiker's Guide to the Galaxy",
         author: "Douglas Adams",
         availability: "N",
